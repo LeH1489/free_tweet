@@ -57,7 +57,7 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
   return (
     <div
       onClick={goToPost}
-      className="border-b-[1px] border-neutral-800 p-5 cursor-pointer hover:bg-neutral-900 transition"
+      className="border-b-[0.1px] border-neutral-300 p-5 cursor-pointer hover:bg-gray-200 transition"
     >
       <div className="flex flex-row items-start gap-3">
         <Avatar userId={data.user.id} />
@@ -65,7 +65,7 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
           <div className="flex flex-row items-center gap-2">
             <p
               onClick={goToUser}
-              className="text-white font-semibold cursor-pointer hover:underline"
+              className="text-black font-semibold cursor-pointer hover:underline"
             >
               {data.user.name}
             </p>
@@ -78,7 +78,7 @@ const PostItem: React.FC<PostItemProps> = ({ data = {}, userId }) => {
             <span className="text-neutral-500 text-sm">{createdAt}</span>
           </div>
           <div
-            className="text-white mt-1 overflow-hidden max-w-md text-justify"
+            className="text-black mt-1 overflow-hidden max-w-md text-justify"
             style={{ whiteSpace: "pre-line" }}
           >
             {data.body}

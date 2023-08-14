@@ -24,10 +24,10 @@ const NotificationsFeed = () => {
       {fetchedNotifications.map((notification: Record<string, any>) => (
         <div
           key={notification.id}
-          className="flex flex-row items-center p-6 gap-4 border-b-[1px] border-neutral-800"
+          className="flex flex-row items-center p-6 gap-4 border-b-[0.1px] border-neutral-300"
         >
-          <BsTwitter color="white" size={32} />
-          <p className="text-white">{notification.body}</p>
+          <BsTwitter color="black" size={32} />
+          <p className="text-black">{notification.body}</p>
         </div>
       ))}
     </div>

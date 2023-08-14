@@ -1,5 +1,5 @@
-import { BsHouseFill, BsBellFill } from "react-icons/bs";
-import { FaUser } from "react-icons/fa";
+import { BsHouseDoor, BsBell } from "react-icons/bs";
+import { BiUser } from "react-icons/bi";
 import { BiLogOut } from "react-icons/bi";
 import SidebarLogo from "./SidebarLogo";
 import SidebarItem from "./SidebarItem";
@@ -15,26 +15,26 @@ const Sidebar = () => {
     {
       label: "Home",
       href: "/",
-      icon: BsHouseFill,
+      icon: BsHouseDoor,
     },
     {
       label: "Notifications",
       href: "/notifications",
-      icon: BsBellFill,
+      icon: BsBell,
       auth: true,
       alert: currentUser?.hasNotification,
     },
     {
       label: "Prolife",
       href: `/users/${currentUser?.id}`,
-      icon: FaUser,
+      icon: BiUser,
       auth: true,
     },
   ];
   return (
-    <div className="col-span-1 h-full pr-4 md:pr-6">
+    <div className="col-span-1 h-full pr-4 md:pr-6 ">
       <div className="flex flex-col items-end">
-        <div className="space-y-2 lg:w-[230px] fixed">
+        <div className="space-y-2 lg:w-[230px] fixed ">
           <SidebarLogo />
           {items.map((item) => (
             <SidebarItem
