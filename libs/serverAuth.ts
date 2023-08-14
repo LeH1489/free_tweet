@@ -9,7 +9,7 @@ const serverAuth = async (req: NextApiRequest, res: NextApiResponse) => {
 
   //kiểm tra trong sesion có trường user hay không
   if (!session?.user?.email) {
-    throw new Error("Not signed in");
+    throw new Error("Not signed in.");
   }
 
   //tìm user trong mongo bằng email
